@@ -1,19 +1,13 @@
 #!/bin/bash
 clear
-echo -n "Please Enter Your First Name: "
-read firstname
-if [ -z $firstname ];then
-	echo "You did not enter a name."
+echo -n "Please Enter The Domain Name "
+read domain
+if [ -z $domain ];then
+	echo "You did not enter a domain."
 	exit
 fi
-echo $firstname
-echo -n "Please Enter Your Last Name: "
-read lastname
-if [ -z $lastname ];then
-	echo "You did not enter a last name"
-	exit
-fi
-echo "Starting recon on $firstname $lastname"
+echo $domain
+echo "Starting recon on $domain"
 read -p "Press <enter> to continue."
 sleep 4
 firefox http://intodns.com/$domain &
